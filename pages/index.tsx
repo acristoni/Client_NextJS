@@ -57,8 +57,6 @@ export default function Home() {
     </ContainerIndex>
   )
 }
-
-// const usersListData = {
 //   usersList: [
 //     {
 //       login: 'defunkt',
