@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Row = styled.div`
+export const RowRowHeader = styled.div`
     width: 65%;
     display: flex;
     align-items: center;
@@ -10,14 +10,14 @@ export const Row = styled.div`
     box-shadow: 5px 10px 18px #888888;
 `;
 
-export const Container = styled.div`
+export const ContainerRowHeader = styled.div`
     width: 40%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 `;
 
-export const Text = styled.span`
+export const TextRowHeader = styled.span`
     font-weight: 700;
     font-size: 36px;
 `;

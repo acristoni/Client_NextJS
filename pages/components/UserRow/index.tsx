@@ -1,4 +1,4 @@
-import { Row, Text, Container } from "./styled";
+import { RowUser, TextUser, ContainerUser } from "./styled";
 
 type Props = {
     id: number,
@@ -7,11 +7,11 @@ type Props = {
 
 export function UserRow({id, login}: Props) {
     return (
-        <Row>
-            <Container>
-                <Text>{id}</Text>
-                <Text>{login}</Text>
-            </Container>
-        </Row>
+        <RowUser>
+            <ContainerUser>
+                <TextUser>{id}</TextUser>
+                <TextUser>{login}</TextUser>
+            </ContainerUser>
+        </RowUser>
     )
 }
