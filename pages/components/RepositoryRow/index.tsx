@@ -6,7 +6,7 @@ type Props = {
     URL: string
 }
 
-export function RepositoryRow({id, name, URL}: Props) {
+export default function RepositoryRow({id, name, URL}: Props) {
     return (
         <RowRepo 
             onClick={()=>window.open(URL, '_blank')} 

@@ -1,6 +1,6 @@
 import { RowRowHeader, TextRowHeader, ContainerRowHeader } from "./styled";
 
-export function UserFirstRow() {
+export default function UserFirstRow() {
     return (
         <RowRowHeader data-testid='RowRowHeader'>
             <ContainerRowHeader>

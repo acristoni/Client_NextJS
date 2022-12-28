@@ -1,6 +1,6 @@
 import { RowRepoHeader, TextRepoHeader, ContainerRowRepoHeader, TextRepoHeaderName } from "./styled";
 
-export function RepositoryRowHeader() {
+export default function RepositoryRowHeader() {
     return (
         <RowRepoHeader data-testid='RowRepoHeader'>
             <ContainerRowRepoHeader>

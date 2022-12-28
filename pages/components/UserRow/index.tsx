@@ -6,7 +6,7 @@ type Props = {
     login: string
 }
 
-export function UserRow({id, login}: Props) {
+export default function UserRow({id, login}: Props) {
     return (
         <RowUser data-testid={`RowUser-${id}`}>
             <Link

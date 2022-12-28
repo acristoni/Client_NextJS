@@ -9,7 +9,7 @@ type Props = {
     pageSize: number,
 }
 
-export function Pagination({ sendPage, count, pageSize }: Props) {
+export default function Pagination({ sendPage, count, pageSize }: Props) {
   const[Count, setCount] = useState(0)
   
   useEffect(() => {

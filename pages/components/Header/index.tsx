@@ -10,7 +10,7 @@ type Props = {
     pageText: string
 }
 
-export function Header({pageText}: Props) {
+export default function Header({pageText}: Props) {
     return (
         <ContainerHeader>
             <ContainerLogo>

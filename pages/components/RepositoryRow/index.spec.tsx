@@ -1,6 +1,6 @@
 import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react'
-import { RepositoryRow } from './index';
+import RepositoryRow from './index';
 import '@testing-library/jest-dom'
 
 describe('RepositoryRow', ()=>{
