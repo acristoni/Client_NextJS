@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import getUsersList from '../services/getUsersList'
 import { ContainerIndex, TextIndex } from '../styles/index.styles'
-import Pagination from './components/Pagination'
-import UserFirstRow from './components/UserRowHeader'
-import UserRow from './components/UserRow'
-import Header from './components/Header'
+import Pagination from '../components/Pagination'
+import UserFirstRow from '../components/UserRowHeader'
+import UserRow from '../components/UserRow'
+import Header from '../components/Header'
 
 export default function Home() {
   const [page, setPage] = useState(0)
