@@ -2,7 +2,7 @@ import { RowRepoHeader, TextRepoHeader, ContainerRowRepoHeader, TextRepoHeaderNa
 
 export function RepositoryRowHeader() {
     return (
-        <RowRepoHeader>
+        <RowRepoHeader data-testid='RowRepoHeader'>
             <ContainerRowRepoHeader>
                 <TextRepoHeader>ID</TextRepoHeader>
                 <TextRepoHeaderName>NAME</TextRepoHeaderName>
