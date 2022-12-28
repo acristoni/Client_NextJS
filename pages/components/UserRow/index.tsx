@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { RowUser, TextUser, ContainerUser } from "./styled";
 
 type Props = {
@@ -8,10 +9,18 @@ type Props = {
 export function UserRow({id, login}: Props) {
     return (
         <RowUser>
-            <ContainerUser>
-                <TextUser>{id}</TextUser>
-                <TextUser>{login}</TextUser>
-            </ContainerUser>
+            <Link
+                href={{
+                  pathname: '/user/[login]',
+                  query: { login: login },
+                }}
+                style={{width: '100%', display: 'flex', justifyContent: 'center'}}
+            >
+                <ContainerUser>
+                    <TextUser>{id}</TextUser>
+                    <TextUser>{login}</TextUser>
+                </ContainerUser>
+            </Link>
         </RowUser>
     )
 }

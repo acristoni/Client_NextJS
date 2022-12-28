@@ -8,7 +8,7 @@ export const RowRepo = styled.div`
     padding: 1%;
     margin: 1%;
     box-shadow: 5px 10px 18px #888888;
-    border-radius: 5px;
+    border-radius: 10px;
 
     :hover{
         width: 95%;

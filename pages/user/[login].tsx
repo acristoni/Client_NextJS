@@ -1,17 +1,17 @@
-import { IRepository } from "../interfaces/repository.interface";
-import { IUserDetail } from "../interfaces/userDetail.interface";
-import { ContainerUser, TextUser, TextUserHeader } from "../styles/user.styles";
-import { formatDate } from "../utils/formatDate";
-import { Header } from "./components/Header";
-import { RepositoryRow } from "./components/RepositoryRow";
-import { RepositoryRowHeader } from "./components/RepositoryRowHeader";
+import { IRepository } from "../../interfaces/repository.interface";
+import { IUserDetail } from "../../interfaces/userDetail.interface";
+import { ContainerUser, TextUser, TextUserHeader } from "../../styles/user.styles";
+import { formatDate } from "../../utils/formatDate";
+import { Header } from "../components/Header";
+import { RepositoryRow } from "../components/RepositoryRow";
+import { RepositoryRowHeader } from "../components/RepositoryRowHeader";
 
 type Props = {
     userDetail: IUserDetail,
     userRepositories: IRepository[]
 }
 
-export default function UserPage () {
+export default function UserPage ({ userDetail, userRepositories }: Props) {    
     return (
         <ContainerUser>
             <Header />
@@ -39,6 +39,35 @@ export default function UserPage () {
             </ContainerUser>
         </ContainerUser>
     )
+}
+
+export async function getServerSideProps(context: any) {
+  const login = context.params.login
+
+  const userDetailsResponse = await fetch(`${process.env.API_URL}/api/users/${login}/details`,{
+    method: "GET",
+    headers: { 
+    "Content-Type": "application/json",
+    }
+  });
+
+  const userDetail = await userDetailsResponse.json();
+
+  const userRepositoriesResponse = await fetch(`${process.env.API_URL}/api/users/${login}/repos`,{
+    method: "GET",
+    headers: { 
+    "Content-Type": "application/json",
+    }
+  });
+
+  const userRepositories = await userRepositoriesResponse.json();
+
+  return {
+    props: {
+      userDetail,
+      userRepositories
+    }
+  }
 }
 
 export const userDetail: IUserDetail = {

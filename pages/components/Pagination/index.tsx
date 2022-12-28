@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import React, { useState, useEffect } from 'react';
-import { Container, PageActive, PageNormal, Icon } from './styled';
+import { ContainerPagination, PageActive, PageNormal, Icon } from './styled';
 
 type Props = {
     sendPage: (page: number)=>void, 
@@ -19,7 +19,7 @@ export function Pagination({ sendPage, count, pageSize }: Props) {
   const iconSize = "32px"
 
   const icons = {
-    arrowLeft:  <Icon onClick={() => {setCount(Count - pageSize)}} >
+    arrowLeft:  <Icon onClick={() => {setCount(Count - pageSize)}} style={{marginRight: '2.0rem'}}>
                     <FontAwesomeIcon 
                         icon={faAngleLeft}
                         fontSize={iconSize}
@@ -36,20 +36,20 @@ export function Pagination({ sendPage, count, pageSize }: Props) {
   let arrayPages = [];
   const numberOfPage = Math.ceil(count/pageSize) + 1
 
-  if ( numberOfPage <= 10 ) {
-    for(let i = 1; i <= 10; i++) {
+  if ( numberOfPage <= 3 ) {
+    for(let i = 1; i <= 3; i++) {
       arrayPages.push(i);
     }
   } else {
-    if ( numberOfPage > 10 ) {
-      for(let i = (numberOfPage - 9); i <= numberOfPage; i++) {
+    if ( numberOfPage > 3 ) {
+      for(let i = (numberOfPage - 2); i <= numberOfPage; i++) {
         arrayPages.push(i);
       }
     }
   }
   
   return (
-    <Container>
+    <ContainerPagination>
         { Count != 0 && icons.arrowLeft }
         {
             arrayPages.map(Page => {
@@ -69,6 +69,6 @@ export function Pagination({ sendPage, count, pageSize }: Props) {
             })
         }
         {icons.arrowRight} 
-    </Container>     
+    </ContainerPagination>     
   );
 }   

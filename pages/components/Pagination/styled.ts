@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const ContainerPagination = styled.div`
     margin-top: 40px;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3%;
 `;
 
 export const Icon = styled.button`
@@ -19,10 +20,11 @@ export const Icon = styled.button`
 `;
 
 export const PageNormal = styled.button`
-    margin-right: 42px;
+    margin-right: 2rem;
     font-size: 24px;
     height: 42px;
     width: 42px;
+    font-weight: 600;
     display: flex;
     justify-content: center;
     align-items: center;

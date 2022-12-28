@@ -8,9 +8,10 @@ export const RowUser = styled.div`
     padding: 1%;
     margin: 1%;
     box-shadow: 5px 10px 18px #888888;
+    border-radius: 10px;
 
     :hover{
-        width: 75%;
+        width: 68%;
         background-color: lightgray;
         cursor: pointer;
     }
@@ -28,6 +29,6 @@ export const TextUser = styled.span`
     font-size: 24px;
 
     :hover{
-        font-size: 36px;
+        font-weight: 700;
     }
 `;
