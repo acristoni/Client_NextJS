@@ -14,7 +14,7 @@ type Props = {
 export default function UserPage ({ userDetail, userRepositories }: Props) {    
     return (
         <ContainerUser>
-            <Header />
+            <Header pageText="On this page you have access to more detailed information about the user and the list of all public repositories that he had on GitHub, when clicking on any of these lines a new window will open and you will be able to see the repository on the GitHub page"/>
             <ContainerUser>
               <TextUserHeader>User&apos;s Details</TextUserHeader>
               <TextUser>ID: {userDetail.id}</TextUser>

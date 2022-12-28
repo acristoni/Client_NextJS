@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <ContainerIndex >
-      <Header />
+      <Header pageText="This is the rendering page of the list of users in ascending order of the id number in the GitHub base, when clicking on any of the lines that have the user id and login number you will be directed to the page where you will have more details of the specific user and the list of all its public repositories"/>
       {
         usersListData?.usersList?.length > 1 ?
         <ContainerIndex>
