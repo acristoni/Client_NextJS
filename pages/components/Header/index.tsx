@@ -6,7 +6,11 @@ import {ContainerHeader,
 import Image from 'next/image'
 import logo from '../../../assets/img/logo.png'
 
-export function Header() {
+type Props = {
+    pageText: string
+}
+
+export function Header({pageText}: Props) {
     return (
         <ContainerHeader>
             <ContainerLogo>
@@ -14,7 +18,7 @@ export function Header() {
             </ContainerLogo>
             <ContainerTextHeader>
                 <TextHeader>Project Challenge - Full Stack</TextHeader>
-                <TextHeaderSmall>The challenge includes creating an API that consumes endpoints from GitHub, made by me in NodeJS, and the front end, made in ReactJS (NextJS), which is consuming this API I created.</TextHeaderSmall>
+                <TextHeaderSmall>{pageText}</TextHeaderSmall>
             </ContainerTextHeader>
         </ContainerHeader>
     )
