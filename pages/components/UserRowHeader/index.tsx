@@ -2,7 +2,7 @@ import { RowRowHeader, TextRowHeader, ContainerRowHeader } from "./styled";
 
 export function UserFirstRow() {
     return (
-        <RowRowHeader>
+        <RowRowHeader data-testid='RowRowHeader'>
             <ContainerRowHeader>
                 <TextRowHeader>ID</TextRowHeader>
                 <TextRowHeader>LOGIN</TextRowHeader>
