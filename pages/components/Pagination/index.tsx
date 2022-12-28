@@ -19,13 +19,20 @@ export function Pagination({ sendPage, count, pageSize }: Props) {
   const iconSize = "32px"
 
   const icons = {
-    arrowLeft:  <Icon onClick={() => {setCount(Count - pageSize)}} style={{marginRight: '2.0rem'}}>
+    arrowLeft:  <Icon 
+                  onClick={() => {setCount(Count - pageSize)}} 
+                  style={{marginRight: '2.0rem'}}
+                  data-testid='leftArrow'
+                >
                     <FontAwesomeIcon 
                         icon={faAngleLeft}
                         fontSize={iconSize}
                     />
                 </Icon>,
-    arrowRight: <Icon onClick={() => {setCount(Count + pageSize)}} >
+    arrowRight: <Icon 
+                  onClick={() => {setCount(Count + pageSize)}}
+                  data-testid='rightArrow'
+                >
                     <FontAwesomeIcon 
                         icon={faAngleRight}
                         fontSize={iconSize}
@@ -49,12 +56,12 @@ export function Pagination({ sendPage, count, pageSize }: Props) {
   }
   
   return (
-    <ContainerPagination>
+    <ContainerPagination data-testid='pagination'>
         { Count != 0 && icons.arrowLeft }
         {
             arrayPages.map(Page => {
             return (
-                <div key={Page}>
+                <div key={Page} data-testid={Page}>
                     {
                         Page == numberOfPage ?
                         <PageActive onClick={()=>{setCount((Page - 1)*pageSize)}}>
