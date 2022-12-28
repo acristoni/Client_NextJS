@@ -8,12 +8,9 @@ type Props = {
 
 export function UserRow({id, login}: Props) {
     return (
-        <RowUser>
+        <RowUser data-testid={`RowUser-${id}`}>
             <Link
-                href={{
-                  pathname: '/user/[login]',
-                  query: { login: login },
-                }}
+                href={`/user/${login}`}
                 style={{width: '100%', display: 'flex', justifyContent: 'center'}}
             >
                 <ContainerUser>
