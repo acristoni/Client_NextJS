@@ -2,9 +2,9 @@ import { IRepository } from "../../interfaces/repository.interface";
 import { IUserDetail } from "../../interfaces/userDetail.interface";
 import { ContainerUser, TextUser, TextUserHeader } from "../../styles/user.styles";
 import { formatDate } from "../../utils/formatDate";
-import Header from "../components/Header";
-import RepositoryRow from "../components/RepositoryRow";
-import RepositoryRowHeader from "../components/RepositoryRowHeader";
+import Header from "../../components/Header";
+import RepositoryRow from "../../components/RepositoryRow";
+import RepositoryRowHeader from "../../components/RepositoryRowHeader";
 
 type Props = {
     userDetail: IUserDetail,

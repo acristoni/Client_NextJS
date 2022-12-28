@@ -4,7 +4,7 @@ import {ContainerHeader,
         ContainerTextHeader,
         ContainerLogo } from './styles'
 import Image from 'next/image'
-import logo from '../../../assets/img/logo.png'
+import logo from '../../assets/img/logo.png'
 
 type Props = {
     pageText: string
