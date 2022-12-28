@@ -11,7 +11,11 @@ type Props = {
     userRepositories: IRepository[]
 }
 
-export default function UserPage ({ userDetail, userRepositories }: Props) {    
+
+// { userDetail, userRepositories }: Props
+
+
+export default function UserPage () {    
     return (
         <ContainerUser>
             <Header />
@@ -41,34 +45,34 @@ export default function UserPage ({ userDetail, userRepositories }: Props) {
     )
 }
 
-export async function getServerSideProps(context: any) {
-  const login = context.params.login
+// export async function getServerSideProps(context: any) {
+//   const login = context.params.login
 
-  const userDetailsResponse = await fetch(`${process.env.API_URL}/api/users/${login}/details`,{
-    method: "GET",
-    headers: { 
-    "Content-Type": "application/json",
-    }
-  });
+//   const userDetailsResponse = await fetch(`${process.env.API_URL}/api/users/${login}/details`,{
+//     method: "GET",
+//     headers: { 
+//     "Content-Type": "application/json",
+//     }
+//   });
 
-  const userDetail = await userDetailsResponse.json();
+//   const userDetail = await userDetailsResponse.json();
 
-  const userRepositoriesResponse = await fetch(`${process.env.API_URL}/api/users/${login}/repos`,{
-    method: "GET",
-    headers: { 
-    "Content-Type": "application/json",
-    }
-  });
+//   const userRepositoriesResponse = await fetch(`${process.env.API_URL}/api/users/${login}/repos`,{
+//     method: "GET",
+//     headers: { 
+//     "Content-Type": "application/json",
+//     }
+//   });
 
-  const userRepositories = await userRepositoriesResponse.json();
+//   const userRepositories = await userRepositoriesResponse.json();
 
-  return {
-    props: {
-      userDetail,
-      userRepositories
-    }
-  }
-}
+//   return {
+//     props: {
+//       userDetail,
+//       userRepositories
+//     }
+//   }
+// }
 
 export const userDetail: IUserDetail = {
     id: 107071638,

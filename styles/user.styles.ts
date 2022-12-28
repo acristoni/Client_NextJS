@@ -11,11 +11,16 @@ export const ContainerUser = styled.div`
 export const TextUser = styled.span`
     font-weight: 400;
     font-size: 24px;
-    margin-bottom: 1%;
+    margin: 1%;
+    overflow-x: hidden;
+    width: 90%;
+    text-align: center;
 `;
 
 export const TextUserHeader = styled(TextUser)`
-    margin-top: 2%;
+    margin: 2%;
     font-weight: 700;
     font-size: 36px;
+    text-align: center;
+    overflow-x: hidden;
 `;

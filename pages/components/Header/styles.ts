@@ -8,6 +8,10 @@ export const ContainerHeader = styled.header`
     justify-content: space-around;
     padding: 1%;
     box-shadow: 5px 10px 18px #888888;
+
+    @media (max-width: 1000px) {
+        flex-direction: column;
+    }
 `;
 
 export const ContainerTextHeader = styled.div`
@@ -15,10 +19,17 @@ export const ContainerTextHeader = styled.div`
     align-items: center;
     flex-direction: column;
     width: 60%;
+    @media (max-width: 1000px) {
+        margin-bottom: 8px;
+    }
 `;
 
 export const ContainerLogo = styled.div`
     width: 30%;
+    @media (max-width: 1000px) {
+        width: 80%;
+        margin: 8px 0;
+    }
 `
 
 export const TextHeader = styled.span`
