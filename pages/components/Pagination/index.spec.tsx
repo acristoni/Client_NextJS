@@ -3,7 +3,7 @@ import { fireEvent, render, screen } from '@testing-library/react'
 import { Pagination } from './index';
 import '@testing-library/jest-dom'
 
-describe('Header', ()=>{
+describe('Pagination', ()=>{
     beforeEach(()=>{
         const sendInfo = (value: number) => {
             return value

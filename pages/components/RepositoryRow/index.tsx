@@ -8,7 +8,10 @@ type Props = {
 
 export function RepositoryRow({id, name, URL}: Props) {
     return (
-        <RowRepo onClick={()=>window.open(URL, '_blank')}>
+        <RowRepo 
+            onClick={()=>window.open(URL, '_blank')} 
+            data-testid={`RowRepo-${id}`}
+        >
             <ContainerRowRepo>
                 <Text>{id}</Text>
                 <Text>{name}</Text>
