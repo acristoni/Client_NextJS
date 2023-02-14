@@ -13,11 +13,8 @@ type Props = {
 export default function Header({pageText}: Props) {
     return (
         <ContainerHeader>
-            <ContainerLogo>
-                <Image src={logo} alt="Shaw and Partners logo" style={{maxWidth: '100%', height: '60%'}}/>
-            </ContainerLogo>
             <ContainerTextHeader>
-                <TextHeader>Project Challenge - Full Stack</TextHeader>
+                <TextHeader>Project Challenge</TextHeader>
                 <TextHeaderSmall>{pageText}</TextHeaderSmall>
             </ContainerTextHeader>
         </ContainerHeader>
