@@ -4,10 +4,6 @@ This repository was developed for the project challenge proposed.
 This repository contains the part of the client where I made a ReactJS app, with NextJS framework, that consumes the API, which I made for these challenge too and the link for it is below. According the proposed in challenge documentation, a create two pages, first one users list, with pagination, and the second page with user details and his/her public repositories. 
 Below are instructions for installation, for running in development mode and for unit tests.
 
-## Front end page link:
-
-https://client-shaw-and-partners.vercel.app/
-
 ## Link to the API, where interaction with it can be performed directly by Swagger:
 
 https://github-api-challenge-shawandpartners.onrender.com/api
