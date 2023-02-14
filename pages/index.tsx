@@ -52,7 +52,7 @@ export default function Home() {
             sendPage={pageInfo}
           />
         </ContainerIndex> :
-        <TextIndex style={{marginTop: '3%'}}>Carregando Página...</TextIndex>
+        <TextIndex style={{marginTop: '3%'}}>Loading Page...</TextIndex>
       }
     </ContainerIndex>
   )
